@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtFlow</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pattaya|Poppins:400,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-head">
+      <nav>
+        <h1 id="logo">Art Flow</h1>
+        <ul>
+          <li><a href="#locations"></a></li>
+          <li><a href="#benefits"></a></li>
+          <li><a href="#contact"></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="#" id="blog">About</a>
+      <a href="#" id="projects">Project</a>
+      <a href="#" id="contact">Contact</a>
+    </div>
+
+    <div class="grid">
+      <img src="./img/bike1.jpg" />
+      <span class="span">Kawasaki ЦЕНА : 3000 евра</span>
+
+      <img src="https://source.unsplash.com/400x400?nature" />
+      <img src="https://source.unsplash.com/400x400?silver" />
+      <img src="https://source.unsplash.com/400x400?beach" />
+      <img src="https://source.unsplash.com/400x400?ocean" />
+      <img src="https://source.unsplash.com/400x400?water" />
+      <img src="https://source.unsplash.com/400x400?trees" />
+      <img src="https://source.unsplash.com/400x400?lake" />
+      <img src="https://source.unsplash.com/400x400?cliff" />
+    </div>
+
+    <footer>
+      <div class="footer-wrapper">
+        <h5>Art Flow &copy;</h5>
+        <p class="follow">Follow us on</p>
+        <ul class="media">
+          <li>
+            <a href="#" title="twitter-social-media" class="move"
+              ><img src="./img/twitter.svg" alt="twitter-social-media"
+            />   Twitter</a>
+          </li>
+          <li>
+            <a href="#" title="youtube-social-media" class="move"
+              ><img src="./img/youtube.svg" alt="youtube-social-media"
+            />      Youtube</a>
+          </li>
+          <li>
+            <a href="#" title="instagram-social-media" class="move"
+              ><img src="./img/instagram.svg" alt="instagram-social-media"
+            />      Instagram</a>
+          </li>
+        </ul>
+      </div>
+<p class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4986.357397959025!2d21.397826155456475!3d42.00229614053372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354146e82537133%3A0x98de630006b4fee0!2sBazaro%20Karpo%C5%A1!5e0!3m2!1sen!2smk!4v1606082595887!5m2!1sen!2smk" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</p>
+<p class="loc">Може да не најдете на следнава локација : <br>
+  Ул.Бул Партизански Одреди
+</p>
+      </div>
+    </footer>
+
+    <script>
+      const lightbox = document.createElement("div");
+      lightbox.id = "lightbox";
+      document.body.appendChild(lightbox);
+
+      const images = document.querySelectorAll("img");
+      images.forEach((image) => {
+        image.addEventListener("click", (e) => {
+          lightbox.classList.add("active");
+          const img = document.createElement("img");
+          img.src = image.src;
+          while (lightbox.firstChild) {
+            lightbox.removeChild(lightbox.firstChild);
+          }
+          lightbox.appendChild(img);
+        });
+      });
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target !== e.currentTarget) return;
+        lightbox.classList.remove("active");
+      });
+
+
+
+    </script>
+  </body>
+</html>
